@@ -1,0 +1,21 @@
+{
+  "findings": [
+    {
+      "product_id": "paseo",
+      "rule_id": "managed-skill-files",
+      "surface": "claude.skills.user",
+      "path": "HOME/.claude/skills/custom-review/SKILL.md",
+      "locator": "",
+      "attribution": "confirmed",
+      "integrity": "modified"
+    }
+  ],
+  "not_find": [
+    {
+      "surface": "claude.skills.user",
+      "path": "HOME/.claude/skills/custom-review/private-notes.txt",
+      "reason": "The extra file is not listed in the manifest."
+    }
+  ],
+  "diagnostics": []
+}

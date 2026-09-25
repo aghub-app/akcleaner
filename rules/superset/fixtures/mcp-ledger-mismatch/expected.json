@@ -1,0 +1,22 @@
+{
+  "findings": [
+    {
+      "product_id": "superset",
+      "rule_id": "claude-mcp-ledger",
+      "surface": "claude.mcp.user",
+      "path": "HOME/.claude.json",
+      "locator": "/mcpServers/linear",
+      "attribution": "confirmed",
+      "integrity": "modified"
+    }
+  ],
+  "not_find": [
+    {
+      "surface": "claude.mcp.user",
+      "path": "HOME/.claude.json",
+      "locator": "/mcpServers/notion",
+      "reason": "The entry name alone is not ledger evidence."
+    }
+  ],
+  "diagnostics": []
+}

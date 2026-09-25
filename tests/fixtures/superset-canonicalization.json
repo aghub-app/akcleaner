@@ -1,0 +1,77 @@
+{
+  "generator": "Node.js v24.15.0; recursive Object.entries(...localeCompare...) + Object.fromEntries + JSON.stringify, matching the upstream Superset algorithm",
+  "cases": [
+    {
+      "id": "standard-command-and-env",
+      "supported": true,
+      "value": {
+        "command": "demo",
+        "type": "stdio",
+        "args": ["--project", "repo"],
+        "env": {"PATH": "/usr/bin"}
+      },
+      "upstream_canonical_json": "{\"args\":[\"--project\",\"repo\"],\"command\":\"demo\",\"env\":{\"PATH\":\"/usr/bin\"},\"type\":\"stdio\"}",
+      "upstream_sha256": "de57dd269028cee1c38e708fb8bf9b9e7c49f80227b9f7a6f436e46b6054cb0d"
+    },
+    {
+      "id": "verified-env-key-order",
+      "supported": true,
+      "value": {
+        "command": "demo",
+        "type": "stdio",
+        "args": ["--project", "repo"],
+        "env": {
+          "USER": "fixture-user",
+          "TMPDIR": "/tmp/fixture",
+          "SHELL": "/bin/sh",
+          "PATH": "/usr/bin",
+          "HOME": "/synthetic/home"
+        }
+      },
+      "upstream_canonical_json": "{\"args\":[\"--project\",\"repo\"],\"command\":\"demo\",\"env\":{\"HOME\":\"/synthetic/home\",\"PATH\":\"/usr/bin\",\"SHELL\":\"/bin/sh\",\"TMPDIR\":\"/tmp/fixture\",\"USER\":\"fixture-user\"},\"type\":\"stdio\"}",
+      "upstream_sha256": "120bed60feafa99765c4f4f329a9e66c9dc674ffcbafa4104c45a0eed2f413d8"
+    },
+    {
+      "id": "http-url-value",
+      "supported": true,
+      "value": {"type": "http", "url": "https://example.invalid/mcp"},
+      "upstream_canonical_json": "{\"type\":\"http\",\"url\":\"https://example.invalid/mcp\"}",
+      "upstream_sha256": "a74edc6e1758417a71625e984dff3c1ed55fc89c909fb23b5ba7b40998ca27b4"
+    },
+    {
+      "id": "mixed-case-string-keys",
+      "supported": false,
+      "value": {"command": "demo", "env": {"a": "1", "B": "2"}},
+      "upstream_canonical_json": "{\"command\":\"demo\",\"env\":{\"a\":\"1\",\"B\":\"2\"}}",
+      "upstream_sha256": "192c070b16cd661b0eb6cf29460e027555c3e7aeb82579b37e5a79ca9c02b53c"
+    },
+    {
+      "id": "unicode-env-keys",
+      "supported": false,
+      "value": {"command": "demo", "env": {"é": "accent", "e": "plain"}},
+      "upstream_canonical_json": "{\"command\":\"demo\",\"env\":{\"e\":\"plain\",\"é\":\"accent\"}}",
+      "upstream_sha256": "78ee10927d523a2d8204c26ec99574ce51f5448aabf6647e0aeacd57b5baed2a"
+    },
+    {
+      "id": "special-env-keys",
+      "supported": false,
+      "value": {"command": "demo", "env": {"~": "tilde", "/": "slash", "__proto__": "own"}},
+      "upstream_canonical_json": "{\"command\":\"demo\",\"env\":{\"__proto__\":\"own\",\"/\":\"slash\",\"~\":\"tilde\"}}",
+      "upstream_sha256": "43d5d6024e8ac358a1d3f6878e41e6620e6f87b034de060f18efe3915eaa40ff"
+    },
+    {
+      "id": "numeric-env-keys",
+      "supported": false,
+      "value": {"command": "demo", "env": {"10": "ten", "2": "two"}},
+      "upstream_canonical_json": "{\"command\":\"demo\",\"env\":{\"2\":\"two\",\"10\":\"ten\"}}",
+      "upstream_sha256": "c8c4f05288d89e9e2052338f1a136f049a1601ade0b1c86cc34afee65ec2888b"
+    },
+    {
+      "id": "number-env-value",
+      "supported": false,
+      "value": {"command": "demo", "env": {"API_KEY": 1.0}},
+      "upstream_canonical_json": "{\"command\":\"demo\",\"env\":{\"API_KEY\":1}}",
+      "upstream_sha256": "9c69df0885eba4298f710fc973140fff42559b52eaca92b0cc51f3dd9f8bd505"
+    }
+  ]
+}

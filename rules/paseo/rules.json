@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "product": {
+    "id": "paseo",
+    "name": "Paseo"
+  },
+  "verified": {
+    "repository": "https://github.com/getpaseo/paseo",
+    "commit": "8cd989529e2d86bb6d1c8a775bf695fa5970c997"
+  },
+  "rules": [
+    {
+      "id": "managed-skill-files",
+      "surfaces": [
+        "shared.skills.user",
+        "claude.skills.user",
+        "codex.skills.user"
+      ],
+      "evidence": {
+        "type": "skill_manifest",
+        "filename": ".paseo-managed-files.json"
+      }
+    }
+  ]
+}

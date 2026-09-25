@@ -1,0 +1,19 @@
+{
+  "findings": [],
+  "artifacts": [
+    {
+      "surface": "claude.hooks.user",
+      "path": "HOME/.claude/settings.json",
+      "locator": "/hooks/Before~1Tool~0Use/0/hooks/0"
+    }
+  ],
+  "not_find": [
+    {
+      "surface": "claude.hooks.user",
+      "path": "HOME/.claude/settings.json",
+      "locator": "/hooks/Before~1Tool~0Use/0/hooks/0",
+      "reason": "It is a user action with no product evidence."
+    }
+  ],
+  "diagnostics": []
+}

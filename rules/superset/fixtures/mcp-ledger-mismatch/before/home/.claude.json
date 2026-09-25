@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "linear": {
+      "command": "user-edited-linear"
+    },
+    "notion": {
+      "command": "notion-mcp"
+    }
+  }
+}

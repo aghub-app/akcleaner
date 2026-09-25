@@ -1,0 +1,26 @@
+{
+  "findings": [
+    {
+      "product_id": "superset",
+      "rule_id": "managed-skill-document",
+      "surface": "shared.skills.user",
+      "path": "HOME/.agents/skills/custom-helper/SKILL.md",
+      "locator": "",
+      "attribution": "confirmed",
+      "integrity": "unknown"
+    }
+  ],
+  "not_find": [
+    {
+      "surface": "shared.skills.user",
+      "path": "HOME/.agents/skills/superset/SKILL.md",
+      "reason": "A matching name without the managed marker is not evidence."
+    },
+    {
+      "surface": "shared.skills.user",
+      "path": "HOME/.agents/skills/custom-helper/notes.txt",
+      "reason": "The marker confirms only the SKILL.md document."
+    }
+  ],
+  "diagnostics": []
+}

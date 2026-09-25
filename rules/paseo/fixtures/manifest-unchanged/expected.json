@@ -1,0 +1,30 @@
+{
+  "findings": [
+    {
+      "product_id": "paseo",
+      "rule_id": "managed-skill-files",
+      "surface": "shared.skills.user",
+      "path": "HOME/.agents/skills/worktree-review/SKILL.md",
+      "locator": "",
+      "attribution": "confirmed",
+      "integrity": "unchanged"
+    },
+    {
+      "product_id": "paseo",
+      "rule_id": "managed-skill-files",
+      "surface": "shared.skills.user",
+      "path": "HOME/.agents/skills/worktree-review/references/guide.md",
+      "locator": "",
+      "attribution": "confirmed",
+      "integrity": "unchanged"
+    }
+  ],
+  "not_find": [
+    {
+      "surface": "shared.skills.user",
+      "path": "HOME/.agents/skills/worktree-review/user-notes.txt",
+      "reason": "The extra file is not listed in the manifest."
+    }
+  ],
+  "diagnostics": []
+}

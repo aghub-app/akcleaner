@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "product": {
+    "id": "superset",
+    "name": "Superset"
+  },
+  "verified": {
+    "repository": "https://github.com/superset-sh/superset",
+    "commit": "23401526cc6787def0b83ff8decef66ba288264a"
+  },
+  "rules": [
+    {
+      "id": "notification-hooks",
+      "surfaces": [
+        "claude.hooks.user",
+        "codex.hooks.user"
+      ],
+      "evidence": {
+        "type": "command_marker",
+        "marker": "$SUPERSET_HOME_DIR/hooks/notify.sh"
+      }
+    },
+    {
+      "id": "managed-skill-document",
+      "surfaces": [
+        "shared.skills.user"
+      ],
+      "evidence": {
+        "type": "skill_marker",
+        "marker": "<!-- superset-managed-skill v1 -->"
+      }
+    },
+    {
+      "id": "claude-mcp-ledger",
+      "surfaces": [
+        "claude.mcp.user"
+      ],
+      "evidence": {
+        "type": "mcp_ledger",
+        "path": ".superset/plugins/mcp-ledger.json"
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "findings": [
+    {
+      "product_id": "paseo",
+      "rule_id": "managed-skill-files",
+      "surface": "shared.skills.user",
+      "path": "HOME/.agents/skills/guarded-skill/SKILL.md",
+      "locator": "",
+      "attribution": "confirmed",
+      "integrity": "unchanged"
+    }
+  ],
+  "not_find": [
+    {
+      "surface": "shared.skills.user",
+      "path": "HOME/.agents/skills/outside.txt",
+      "reason": "The manifest path escapes its skill directory."
+    }
+  ],
+  "diagnostics": [
+    {
+      "code": "invalid_manifest_path",
+      "rule_id": "managed-skill-files",
+      "entry": "../outside.txt"
+    }
+  ]
+}

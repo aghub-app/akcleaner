@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "Before/Tool~Use": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo synthetic-user-hook"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "findings": [
+    {
+      "product_id": "muxy",
+      "rule_id": "notification-hooks",
+      "surface": "claude.hooks.user",
+      "path": "HOME/.claude/settings.json",
+      "locator": "/hooks/Stop/0/hooks/0",
+      "attribution": "candidate",
+      "integrity": "unknown"
+    },
+    {
+      "product_id": "superset",
+      "rule_id": "notification-hooks",
+      "surface": "claude.hooks.user",
+      "path": "HOME/.claude/settings.json",
+      "locator": "/hooks/Stop/0/hooks/1",
+      "attribution": "candidate",
+      "integrity": "unknown"
+    }
+  ],
+  "not_find": [
+    {
+      "surface": "claude.hooks.user",
+      "path": "HOME/.claude/settings.json",
+      "locator": "/hooks/Stop/0/hooks/2",
+      "reason": "The synthetic user command contains neither product marker."
+    }
+  ],
+  "diagnostics": []
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "product": {
+    "id": "muxy",
+    "name": "Muxy"
+  },
+  "verified": {
+    "repository": "https://github.com/muxy-app/muxy",
+    "commit": "ab008599954afe683a48410b98b8f483adb96b40"
+  },
+  "rules": [
+    {
+      "id": "notification-hooks",
+      "surfaces": [
+        "claude.hooks.user",
+        "codex.hooks.user"
+      ],
+      "evidence": {
+        "type": "command_marker",
+        "marker": "muxy-notification-hook"
+      }
+    }
+  ]
+}
